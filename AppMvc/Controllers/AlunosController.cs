@@ -13,8 +13,7 @@ namespace AppMvc.Controllers
 
         [HttpGet]
         [AllowAnonymous]
-        [OutputCache(Duration = 60)]
-        [Route("listar-alunos")]
+      //  [OutputCache(Duration = 60)]
         public async Task<ActionResult> Index()
         {
             return View(await db.Alunos.ToListAsync());
